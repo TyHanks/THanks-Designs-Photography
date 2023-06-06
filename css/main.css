@@ -1,0 +1,202 @@
+/*----------------------------------------------------------------------------------------*/
+/*-- Mobile/Main CSS --*/
+/*----------------------------------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*-- Navigation Bar --*/
+.navbar {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #343837;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: #03719c;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #03719c;
+  font-weight: 500 !important;
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+/*-- Images --*/
+.container {
+  padding: 40px 5%;
+  background-color: #03719c;
+  color: #ffffff;
+}
+
+.heading-text {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.heading-text span {
+  font-weight: 100;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Responsive image gallery rules begin*/
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image-gallery > li {
+  flex-basis: 350px; /*width: 350px;*/
+  position: relative;
+  cursor: pointer;
+}
+
+.image-gallery::after {
+  content: "";
+  flex-basis: 350px;
+}
+
+.image-gallery li img {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 57, 57, 0.502);
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.2s 0.1s ease-in-out;
+  color: #fff;
+  border-radius: 5px;
+  /* center overlay text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hover */
+.image-gallery li:hover .overlay {
+  transform: scale(1);
+}
+
+.footer {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  border-top: 4px solid #343837;
+}
+
+.main-footer {
+  list-style-type: none;
+  display: none;
+}
+
+/*----------------------------------------------------------------------------------------*/
+/*-- Desktop CSS --*/
+/*----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  /*-- Navigation Bar --*/
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: #0f9b8e;
+  }
+
+  .footer {
+    display: flex;
+    padding-bottom: 0;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-footer {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+  }
+
+  .footer-text {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #03719c;
+  }
+}
